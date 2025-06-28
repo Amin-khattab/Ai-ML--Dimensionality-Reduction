@@ -29,7 +29,6 @@ y_pred = classifier.predict(x_test_scaled)
 print(accuracy_score(y_test,y_pred))
 print(confusion_matrix(y_test,y_pred))
 
-# Visualization function for decision boundary
 
 def plot_decision_boundary(X, y, classifier, title):
     X1, X2 = np.meshgrid(
@@ -49,8 +48,8 @@ def plot_decision_boundary(X, y, classifier, title):
     plt.legend()
     plt.show()
 
-# Plot for training set
+
 plot_decision_boundary(x_train_scaled, y_train, classifier, 'Logistic Regression (Training set)')
 
-# Plot for test set
+
 plot_decision_boundary(x_test_scaled, y_test, classifier, 'Logistic Regression (Test set)')
